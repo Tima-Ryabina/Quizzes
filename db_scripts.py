@@ -148,14 +148,14 @@ def add_links_auto():
     open_database()
     cursor.execute('PRAGMA foreign_keys = ON')
     # География (quiz_id = 1) – вопросы 1..9
-    for qid in range(1, 10):
-        cursor.execute("INSERT INTO quiz_content (quiz_id, question_id) VALUES (1, ?)", (qid,))
+    for questionid in range(1, 10):
+        cursor.execute("INSERT INTO quiz_content (quiz_id, question_id) VALUES (1, ?)", (questionid,))
     # Математика (quiz_id = 2) – вопросы 10..18
-    for qid in range(10, 19):
-        cursor.execute("INSERT INTO quiz_content (quiz_id, question_id) VALUES (2, ?)", (qid,))
+    for questionid in range(10, 19):
+        cursor.execute("INSERT INTO quiz_content (quiz_id, question_id) VALUES (2, ?)", (questionid,))
     # Русский язык (quiz_id = 3) – вопросы 19..27
-    for qid in range(19, 28):
-        cursor.execute("INSERT INTO quiz_content (quiz_id, question_id) VALUES (3, ?)", (qid,))
+    for questionid in range(19, 28):
+        cursor.execute("INSERT INTO quiz_content (quiz_id, question_id) VALUES (3, ?)", (questionid,))
     connection.commit()
     close_database()
 
